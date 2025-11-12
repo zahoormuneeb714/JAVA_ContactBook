@@ -1,3 +1,5 @@
+package Contact_Book;
+
 import javax.swing.JOptionPane;
 
 public class Test {
@@ -9,7 +11,8 @@ public class Test {
         // ! Showing Options
         while (true) {
             String input = JOptionPane
-                    .showInputDialog("1. Add\n2. Search\n3. Delete\n4. Check Total Contacts\n5. Exit");
+                    .showInputDialog(
+                            "1. Add\n2. Search\n3. Delete\n4. Check Total Contacts\n5. List Contacts\n6. Exit");
             int operation = Integer.parseInt(input);
 
             // ! Handling UserInput
@@ -33,7 +36,13 @@ public class Test {
                     break;
 
                 case 5:
-                    JOptionPane.showMessageDialog(null, "Thanks for using JAVA Address Book");
+                    myContactBook.listTotalContacts();
+                    break;
+
+                case 6:
+                    myContactBook.saveContacts();
+                    System.out.println("Thanks for using JAVA Contact Book");
+                    JOptionPane.showMessageDialog(null, "Thanks for using JAVA Contact Book");
                     System.exit(0);
                     break;
 

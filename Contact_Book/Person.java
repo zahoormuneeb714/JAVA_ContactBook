@@ -1,3 +1,5 @@
+package Contact_Book;
+
 import javax.swing.JOptionPane;
 
 public class Person {
@@ -50,9 +52,8 @@ public class Person {
     // ! Other Methods
     public void printPersonInfo() {
         System.out.println("Person Information");
-        System.out.println("Name: " + this.getName());
-        System.out.println("Number: " + this.getNumber());
-        System.out.println("Address: " + this.getAddress());
+        System.out.println(
+                "[NAME] " + this.getName() + " [NUMBER] " + this.getNumber() + " [ADDRESS] " + this.getAddress());
     }
 
     public void printPersonInfoUI() {
